@@ -1,0 +1,45 @@
+apply plugin: 'java-library'
+
+dependencies {
+    compile 'io.jeti:collections:1.0.0'
+    compile 'io.jeti:linalg:1.0.0'
+    compile 'io.jeti:matrix:1.0.0'
+    compile 'io.jeti:serialize:1.0.0'
+    compile 'io.jeti:streams:1.0.0'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+ext {
+
+    bintrayRepo = 'io'
+    bintrayName = 'java'
+
+    publishedGroupId = 'io.jeti'
+    libraryName = 'java'
+    artifact = 'java'
+
+    libraryDescription = 'A collection of all of the Java jeti.io packages, excluding Android-specific packages in io.jeti:android. If you want both, then use the package io.jeti:all.'
+
+    siteUrl = 'https://github.com/jeti/java'
+    gitUrl = 'https://github.com/jeti/java.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'jeti'
+    developerName = 'Matthew Holzel'
+    developerEmail = 'matthew.holzel@gmail.com'
+
+    organization = 'jeti'
+
+    licenseName = 'The Apache Software License, Version 2.0'  //Example for license
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+
+}
+
+//These two remote files contain Bintray configuration as described above.
+apply from: 'https://raw.githubusercontent.com/jeti/jcenter/master/install.gradle'
+apply from: 'https://raw.githubusercontent.com/jeti/jcenter/master/bintray.gradle'
+
